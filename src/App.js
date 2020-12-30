@@ -4,14 +4,15 @@ import { Link, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './containers/home';
-import HomeIsLoggedIn from './containers/home';
+import AnotherPage from './containers/array';
 
-function App({ isLoggedIn }) {
+function App() {
 
   return (
     <div className="container">
       <Switch>
-        <Route exact path="/" component={isLoggedIn ? HomeIsLoggedIn : Home} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/array" component={AnotherPage} />
         <Route exact path="/login">
           <div>Login page</div>
           <Link to="/">Back</Link>

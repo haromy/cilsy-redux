@@ -6,6 +6,9 @@ const Home = ({ counter, tambahSatu, tambahDariInput }) => {
   const [input, setinput] = useState('');
   return (
     <div>
+      <Link to="/array">
+        <button className="btn btn-primary">array page</button>
+      </Link>
       <Link to="/login">
         <button className="btn btn-primary">Login</button>
       </Link>
@@ -37,22 +40,25 @@ const Home = ({ counter, tambahSatu, tambahDariInput }) => {
   );
 }
 
-const mapStateToProps = (state) => {
+// adalah membuat sebuah props (masukan) untuk ambil data dari redux store
+const mapStateToProps = (props) => {
   return {
-    counter: state.counter,
+    counter: props.counter.total,
   }
 }
 
+// adalah membuat sebuah function untuk memanggil redux action
 const mapDispatchtoProps = (dispatch) => {
   return {
     tambahSatu: () => dispatch({
       type: 'INC_COUNTER'
     }),
     tambahDariInput: (value) => dispatch({
-      type: 'ADD_COUNTER',
+      type: 'TAMBAH_COUNTER_DARI_INPUT',
       value,
     })
   }
 }
 
+// connect adalah menghubungkan & inisialisasi props store dan function redux
 export default connect(mapStateToProps, mapDispatchtoProps)(Home);
