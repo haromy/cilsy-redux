@@ -15,6 +15,9 @@ const Home = ({ counter, tambahSatu, tambahDariInput }) => {
       <Link to="/signup">
         <button className="btn btn-primary">signup</button>
       </Link>
+      <Link to="/todo">
+        <button className="btn btn-primary">todo</button>
+      </Link>
       <div style={{ fontSize: 32 }}>COUNTER: {counter}</div>
       <button
         className="btn btn-primary"
@@ -43,7 +46,7 @@ const Home = ({ counter, tambahSatu, tambahDariInput }) => {
 // adalah membuat sebuah props (masukan) untuk ambil data dari redux store
 const mapStateToProps = (props) => {
   return {
-    counter: props.counter.total,
+    counter: props.counter.counter,
   }
 }
 

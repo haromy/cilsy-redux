@@ -35,3 +35,19 @@
     transform: rotate(360deg);
   }
 }
+
+
+table {
+  width: 100%;
+}
+td,th {
+  /* width: 100%; */
+  border: 1px solid rgb(97, 97, 97);
+  padding: 8px;
+}
+.no {
+  width: 100px;
+}
+.detail {
+  width: 500px;
+}

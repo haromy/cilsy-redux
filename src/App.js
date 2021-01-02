@@ -5,6 +5,7 @@ import './App.css';
 
 import Home from './containers/home';
 import AnotherPage from './containers/array';
+import Todo from './containers/todo';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/array" component={AnotherPage} />
+        <Route exact path="/todo" component={Todo} />
         <Route exact path="/login">
           <div>Login page</div>
           <Link to="/">Back</Link>

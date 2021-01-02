@@ -1,5 +1,5 @@
 const initialState = {
-    total: 0,
+    counter: 0,
     arrayResp: [],
     data: [],
   }
